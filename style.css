@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:poppins;
+
+}
+body{
+ background-color: #fff;
+ 
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 3rem;
+    max-width: 1400px;
+    background-color: #fff;
+ 
+}
+.logo{
+    cursor: pointer;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    margin-right: 20px;
+
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    transition:transform 0.3s ease-in-out;
+}
+
+.navbar a:hover{
+    color: rgb(92, 74, 74);
+    
+}
+hr{
+    color: black;
+    width: 90%;
+    height: 2px;
+}
+.about{
+    background-color: #fff;
+    max-width: 1400px;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+}
+.img{
+    position: absolute;
+    right: 0cm;
+    top: 81px;
+    height: 560px;
+}
+.ab{
+    position: absolute;
+    left: 250px;
+    top: 270px;
+    z-index: 10;
+    font-size: 2rem;
+
+}
+.dis{
+    position: absolute;
+    top: 50px;
+    color: #fff;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    font-size: 2.5rem;
+}
+.hire{
+    display: flex;
+    text-decoration: none;
+    background-color: black;
+    color: #fff;
+    border-radius: 24px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 140px;
+    border:2px solid black;
+}
+.hire:hover{
+    display: flex;
+    text-decoration: none;
+    background-color: #fff;
+    color: black ;
+    border-radius: 24px;
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 140px;
+    border:2px solid black;
+}
+.cv{
+    display: flex;
+    text-decoration: none;
+    background-color: #fff;
+    color: black;
+
+    border:2px solid black;
+    border-radius: 24px;
+    padding: 0.7rem 1.7rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 140px;
+    left: 160px;
+}
+.cv:hover{
+    display: flex;
+    text-decoration: none;
+    background-color: black;
+    color: #fff;
+
+    border:2px solid black;
+    border-radius: 24px;
+    padding: 0.7rem 1.7rem;
+    font-size: 1rem;
+    position: absolute;
+    top: 140px;
+    left: 160px;
+}
+.db{
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+}
+.db1{
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    opacity: 0;
+}
+.cv:hover .db {
+    opacity: 0;
+}
+
+.cv:hover .db1 {
+    opacity: 1;
+}
+#skill{
+    max-width: 1400px;
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    display: flex;
+    position: absolute;
+    top: 650px;
+    
+    color: #fff;
+}
+.ms{
+    position: absolute;
+    top: 40px;
+    left: 510px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.s{
+    color:#00e1ff ;
+}
+.H{
+    color: #4e4949;
+    position:absolute ;
+    top: 130px;
+    height: 2px;
+    width: 40%;
+}
+#skills {
+    margin: 50px auto;
+    text-align: center;
+    position: absolute;
+    background-color: black;
+    width: 500px;
+    top: 160px;
+    right: 30px;
+    cursor: pointer;
+}
+
+
+.graph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+
+.labels {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.vertical-line {
+    position: absolute;
+    left: 40px; 
+    height: 100%;
+    width: 2px;
+    background-color: #b399ff;
+}
+
+
+.y-labels {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 14px;
+}
+
+.y-labels div {
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.bar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 80%;
+    height: 300px;  
+    position: relative;
+    z-index: 2; 
+}
+
+.bar {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    border-radius: 20px;
+}
+
+.bar-label {
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.bar-fill {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fillAnimation 2s ease-in-out forwards;
+}
+
+.html { height: 90%; background-color: #fff; color: black;}
+.css { height: 85%; background-color: #fff; color: black;}
+.js { height: 40%; background-color: #fff; color: black; }
+.react { height: 20%; background-color: #fff; color: black; }
+
+@keyframes fillAnimation {
+    from { height: 0%; }
+}
+.ski{
+    background-color: black;
+    color: #00e1ff;
+    display: flex;
+    flex-direction: column;
+    
+}
+.inf{
+    font-size: 17px;
+    margin-left: 10px;
+    position: absolute;
+    right:695px ;
+    top: 200px;
+    cursor: pointer;
+}
+.im{
+    position: absolute;
+    left: 7px;
+    top: 150px;
+    width: 125px;
+    height: 120px;
+    cursor: pointer;
+}
+.ci{
+    position: absolute;
+    left: 0px;
+    top: 260px;
+    width: 140px;
+    height: 120px;
+    cursor: pointer;
+}
+.infc{
+    font-size: 17px;
+    margin-left: 10px;
+    position: absolute;
+    right:715px ;
+    top: 305px;
+    cursor: pointer;
+}
+.ji{
+    position: absolute;
+    left: 0px;
+    top: 360px;
+    width: 140px;
+    height: 140px; 
+    cursor: pointer;
+}
+.infj{
+    font-size: 17px;
+    margin-left: 10px;
+    position: absolute;
+    right:650px ;
+    top:415px;
+    cursor: pointer;
+}
+.ri{
+    position: absolute;
+    left: 13px;
+    top: 470px;
+    width: 120px;
+    height: 120px; 
+    cursor: pointer;
+}
+.infr{
+    font-size: 17px;
+    margin-left: 10px;
+    position: absolute;
+    right:673px ;
+    top:515px;
+    cursor: pointer;
+}
+.spa{
+    color: #fff;
+}
+#projects{
+    max-width: 1400px;
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    color: #fff;
+    position: absolute;
+    top: 1304px;
+}
+#contact{
+    position: absolute;
+    
+    color: black;
+    top: 2000px;
+    height:800px ;
+    width: 100%;
+    max-width: 1400px;
+    background-image:url("bg2.jpg") ;
+    background-size: cover;
+}
+#ct{
+    position: absolute;
+    top: 90px;
+    left: 515px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #fff;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+    
+}
+.us{
+    color: #B0B0B0;
+       text-shadow:
+    0 0 0 black,
+    0 0 0 black,
+    0 0 0 black,
+    0 0 0 black;
+    
+}
+#contact-form{
+    background-image: url("bg3.jpg");
+    color: #fff;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between 20px;
+    border-radius: 15px;
+    position: absolute;
+    right: 525px;
+    top: 200px;
+    background-size: cover;
+}
+#name{
+    top: 45px;
+    height: 50px;
+    background-color: #302d2d;
+    position: absolute;
+    width: 225px;
+    left: 37px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    padding: 3px;
+    transition: transform 0.2s ease;
+}
+#mail{
+    top: 135px;
+    height: 50px;
+    background-color: #302d2d;
+    position: absolute;
+    width: 225px;
+    left: 37px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    padding: 3px;
+}
+#mess{
+    top: 200px;
+    height: 100px;
+    background-color: #302d2d;
+    position: absolute;
+    width: 225px;
+    left: 37px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    padding: 6px;
+}
+#but{
+    position: absolute;
+    bottom: 40px;
+    width: 225px;
+    left: 37px;
+    border-radius: 15px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+   
+
+}
+#send{
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    font-size: 16px;
+
+}
+#ln{
+    position: absolute;
+    top: 15px;
+    left: 42px;
+    font-size: 0.9rem;
+}
+#le{
+    position: absolute;
+    top: 105px;
+    left: 42px;
+    font-size: 0.9rem;
+}
+#arrow{
+    position: absolute;
+    bottom: 40px;
+    width: 225px;
+    left: 220px;
+    border-radius: 7px;
+    height: 50px;
+    z-index: 1;
+    width: 25px;
+
+}
+#but:hover{
+    transform: scale(1.05);
+}
+input:focus{
+    transform: scale(1.05);
+}
+textarea::placeholder {
+    color: #A0A0A0;
+    opacity: 0.7;
+    font-size: 0.8rem;
+  }
+textarea{
+    resize: none;
+}
+.socials{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    right:470px;
+    top: 220px;
+
+}
+.socials a:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.so{
+    width: 35px;
+    height: 40px;
+}
+#hr{
+    position: absolute;
+    bottom: 90px;
+    width:100%;
+}
+#tag{
+    position: absolute;
+    bottom: 50px;
+    left: 600px;
+    color: #A0A0A0;
+    font-size: 0.8rem;
+}
+@media screen and (max-width: 768px) {
+    /* Reset absolute positioning to static so elements flow naturally */
+    header,
+    .about,
+    #skill,
+    #projects,
+    #contact,
+    .ab,
+    .img,
+    .hire,
+    .cv,
+    #contact-form,
+    .socials,
+    .ski > div {
+      position: static !important;
+      margin: 0 auto;
+    }
+  
+    /* Header adjustments */
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+    }
+    .navbar ul {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    /* About Section */
+    .about {
+      padding: 2rem 1rem;
+    }
+    .ab, .img {
+      width: 90%;
+      margin-bottom: 1rem;
+    }
+    .img {
+      height: auto;
+      max-width: 100%;
+    }
+    .hire,
+    .cv {
+      display: inline-block;
+      margin: 0.5rem;
+    }
+  
+    /* Section adjustments */
+    #skill, #projects, #contact {
+      padding: 2rem 1rem;
+      height: auto;
+    }
+  
+    /* Simplify graph container for skills */
+    .graph-container, #skills, .bar-container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .bar {
+      width: 30px;
+    }
+  
+    /* Contact form adjustments */
+    #contact-form {
+      width: 90%;
+      max-width: 350px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+  }
+  

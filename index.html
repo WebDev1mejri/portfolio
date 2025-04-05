@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+</head>
+<body>
+    
+    <header>
+        <h1 class="logo">𝓂𝑒𝒿𝓇𝒾</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#about">about</a></li>
+                <li><a href="#skill">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    <hr>
+    <section class="about">
+        <div class="ab">
+            <h1>HI, I'm Mejri Yassin </h1><br><h1 class="dis">a frontend web dev</h1> 
+            <a href="#contact" class="hire">Hire me</a>
+            <a href="" download class="cv">Download CV <img src="dow.svg" alt="download button" class="db" ><img src="download.svg" alt="download button" class="db1" >ㅤㅤ </a>
+        </div>
+        <div class="ph">
+            <img src="bg1.jpg" alt="photo" class="img">
+        </div>
+        
+    </section>
+    <section id="skill">
+        <h1 class="ms"><span class="s">M</span>Y SKILL<span class="s">S</span></h1>
+        <HR class="H"></HR>
+        <section id="skills">
+            <div class="graph-container">
+                <!-- Vertical and Horizontal Lines -->
+                <div class="labels">
+                    <div class="vertical-line"></div>
+                    <div class="y-labels">
+                        <div>100</div>
+                        <div>80</div>
+                        <div>60</div>
+                        <div>40</div>
+                        <div>20</div>
+                    </div>
+                </div>
+        
+                <div class="bar-container">
+                    <div class="bar">
+                        <div class="bar-fill css">85%</div>
+                        <div class="bar-label">CSS</div>
+                    </div>
+                    <div class="bar">
+                        <div class="bar-fill html">90%</div>
+                        <div class="bar-label">HTML</div>
+                    </div>
+                
+                    <div class="bar">
+                        <div class="bar-fill react">20%</div>
+                        <div class="bar-label">React</div>
+                    </div>
+                    <div class="bar">
+                        <div class="bar-fill js">40%</div>
+                        <div class="bar-label">JavaScript</div>
+                    </div>
+                    
+                </div>
+        
+                <!-- X-axis labels -->
+       
+            </div>
+        </section>
+        <div class="ski">
+            <div class="html1">
+                <img src="html.png" class="im">
+                <p class="inf">I have a strong command of HTML (90%), allowing me to build<br><span class="spa">well-structured</span>,
+                    <span class="spa">semantic</span> , and <span class="spa">accessible </span> web pages.</p>
+            </div>
+            <div class="css1">
+                <img src="css.png" class="ci">
+                <p class="infc">With CSS mastery (85%), I can create <span class="spa">visually appealing</span>  and <br><span class="spa">responsive designs</span>  that enhance user experience.</p>
+            </div>
+            <div class="js1">
+                <img src="js.png" class="ji">
+                <p class="infj">I have a basic understanding of JavaScript (40%) and can work with<br><span class="spa">DOM manipulation</span>  and <span class="spa">simple logic</span>.</p>
+            </div>
+            <div class="react1">
+                <img src="react.png" class="ri">
+                <p class="infr">I'm just getting started with React (20%) and learning how to build<br><span class="spa">interactive UI components</span>.</p>
+            </div>
+            
+          
+    </section>
+    <section id="projects">
+        
+        <h1 class="ms"><span class="s">P</span>ROJECT<span class="s">S</span></h1>
+        <hr class="H">
+
+    </section>
+    <section id="contact">
+        
+        <h1 id="ct">CONTACT <span class="us">𝓂𝑒</span></h1>
+        <div class="socials">
+            <a href="https://www.instagram.com/webdev_mejri" target="_blank"><img src="instagram.svg" alt="instagram" class="so"></a>
+            <a href="https://x.com/WebDev_mejri" target="_blank"><img src="twitter.svg" alt="X" class="so"></a>
+            <a href="https://discord.gg/gTfT8ZURJz" target="_blank"><img src="discord.svg" alt="discord" class="so"></a>
+            <a href="https://github.com/WebDev1mejri" target="_blank"><img src="github.svg" alt="github" class="so"></a>
+        </div>
+        <form id="contact-form">
+            <label for="name" id="ln">name   :</label>
+            <input type="text" name="name" placeholder="..." required autocomplete="off" id="name"/>
+            <label for="email" id="le">Email  :</label>
+            <input type="email" name="email" placeholder="..." required id="mail" />
+            <img src="arrow-right.svg" alt="arrow" id="arrow">
+            <textarea name="message" placeholder="Have an idea ? Let's bring  it to life! ..." required id="mess" ></textarea>
+            <button type="submit" id="but"><h5 id="send">Send </h5></button>
+        </form>
+        <footer>
+            <hr id="hr">
+            <p id="tag"> created by mejri yassin</p>
+
+        </footer>
+          
+    </section>
+    
+    <script>
+        (function () {
+          emailjs.init("_CuGKL3aamm7gI0Ul"); // From EmailJS dashboard
+        })();
+      
+        document.getElementById("contact-form").addEventListener("submit", function (e) {
+          e.preventDefault();
+      
+          emailjs.sendForm("service_4dyyptf", "template_p1kk2ca", this).then(
+            function () {
+              alert("Message sent!");
+            },
+            function (error) {
+              alert("Failed to send: " + JSON.stringify(error));
+            }
+          );
+        });
+      </script> 
+</body>
+</html>
+
